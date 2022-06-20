@@ -5,6 +5,7 @@ class AddTodo extends Component {
   // Create a local react state of the this component with a content property set to nothing.
   constructor() {
     super();
+    Date={};
     this.state = {
       content: "",
     };
@@ -13,6 +14,7 @@ class AddTodo extends Component {
   // "event" is the defined action a user takes. In this case, the event is triggered when the user types something
   // into the text field.
   handleChange = (event) => {
+    Date().toLocaleString('en-US')
     this.setState({
       content: event.target.value,
     });
